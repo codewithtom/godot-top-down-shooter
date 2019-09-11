@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Tanks.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 39 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.232, 0.232 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 94, 70, 250, 329.8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="BulletPoint" type="Node2D" parent="."]
+position = Vector2( 45.73, 0 )
